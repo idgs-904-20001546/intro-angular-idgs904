@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-school',
+  templateUrl: './school.component.html',
 })
-export class AppComponent {
+export class SchoolComponent {
   title = 'intro-angular-idgs904';
   student = {
     birthdate: new Date(),
