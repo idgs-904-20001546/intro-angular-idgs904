@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --bs-primary: rgb(147, 123, 169) !important;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-indigo) !important;
+    --bs-btn-border-color: var(--bs-indigo) !important;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-indigo) !important;
+    --bs-btn-border-color: var(--bs-indigo) !important;
+}

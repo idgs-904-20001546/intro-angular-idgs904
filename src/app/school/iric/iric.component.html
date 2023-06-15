@@ -6,10 +6,27 @@
     <div class="card-body">
         <p class="card-title">
         </p>
-        <div class="table-responsive" *ngif="students.length">
+        <div class="mb-3 row">
+            <div class="col-md-4">
+                <label for="" class="form-label">Filtrar por:</label>
+                <input type="text" [(ngModel)]="filterList" name="filter" class="form-control">
+            </div>
+        </div>
+        <div class="py-3">
+            <p class="lead">
+                <span class="fw-bold">Filtro: </span>{{ filterList }}
+            </p>
+        </div>
+        <div class="table-responsive" *ngIf="students.length">
             <table class="table">
                 <thead> 
                     <tr>
+                        <td>
+                            <div class="d-flex gap-2">
+                                <input type="checkbox" [(ngModel)]="showImage" class="form-check">
+                                Mostrar
+                            </div>
+                        </td>
                         <td>Matricula</td>
                         <td>Nombre</td>
                         <td>Edad</td>
@@ -18,8 +35,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr >
-                        <td></td>
+                    <tr *ngFor="let item of students">
+                        <td>
+                            <div *ngIf="showImage">
+                                <img
+                                    class="object-fit-cover"
+                                    [style.width.px]="imageWidth"
+                                    [style.height.px]="imageWidth"
+                                    [src]="item.image" alt="">
+                            </div>
+                        </td>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.age }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>{{ item.payment }}</td>
                     </tr>
                 </tbody>
             </table>
