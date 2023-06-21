@@ -1,0 +1,25 @@
+<div class="container py-5">
+    <h2 class="display-6 text-center text-primary opacity-75 text-uppercase fw-bold mb-5">Calculadora</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div>
+                <div class="mb-3">
+                    <label for="txt-first">First Value</label>
+                    <input type="text" [(ngModel)]="first" id="txt-first" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="txt-second">Second Value</label>
+                    <input type="text" [(ngModel)]="second" id="txt-second" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <p  class="text-primary fs-4 text-center">
+                        {{ result }}
+                    </p>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-secondary px-5" (click)="plus()">CALCULAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

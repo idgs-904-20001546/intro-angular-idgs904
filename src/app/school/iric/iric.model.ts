@@ -1,4 +1,4 @@
-interface Iric {
+export interface Iric {
     id: number,
     name: string,
     age: number,

@@ -7,6 +7,11 @@ import { StudentComponent } from './student/student.component';
 import { IricComponent } from './school/iric/iric.component';
 import { MenuComponent } from './school/menu/menu.component';
 import { FormsModule } from '@angular/forms';
+import { PlusComponent } from './school/forms/plus/plus.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OperasbasComponent } from './school/forms/operasbas/operasbas.component';
+import { OperasModule } from './school/forms/operas/operas.module';
+
 
 @NgModule({
   declarations: [
@@ -14,10 +19,16 @@ import { FormsModule } from '@angular/forms';
     SchoolComponent,
     StudentComponent,
     IricComponent,
-    MenuComponent
+    MenuComponent,
+    PlusComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    OperasModule
+  ],
+  exports: [
     FormsModule
   ],
   providers: [],

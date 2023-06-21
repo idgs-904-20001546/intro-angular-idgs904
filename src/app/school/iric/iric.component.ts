@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { Iric } from './iric.model';
 
 @Component({
   selector: 'app-iric',
   templateUrl: './iric.component.html',
   styleUrls: ['./iric.component.css']
 })
+
 export class IricComponent {
 	imageWidth: number = 50;
 	imageHeight: number = 50;
