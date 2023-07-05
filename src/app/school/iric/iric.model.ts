@@ -4,5 +4,6 @@ export interface Iric {
     age: number,
     email?: string,
     payment: number,
-    image?: string
+    image?: string,
+    note?: number
 }

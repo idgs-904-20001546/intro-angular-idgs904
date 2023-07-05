@@ -1,0 +1,9 @@
+<div 
+    [title]="note"
+    (click)="onClick()"
+>
+    <div class="d-flex gap-1 text-warning">
+        <i *ngFor="let item of [].constructor(note)" class="bi bi-star-fill"></i>
+        <i *ngFor="let item of [].constructor(5-note)" class="bi bi-star"></i>
+    </div>
+</div>

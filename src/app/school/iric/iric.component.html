@@ -27,15 +27,16 @@
                                 Mostrar
                             </div>
                         </td>
-                        <td>Matricula</td>
-                        <td>Nombre</td>
-                        <td>Edad</td>
-                        <td>Correo</td>
-                        <td>Pago</td>
+                        <th>Matricula</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Correo</th>
+                        <th>Pago</th>
+                        <th>Calificación <span *ngIf="currentNote" class="text-primary fw-normal">({{ currentNote }})</span></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of students">
+                    <tr *ngFor="let item of students|studentFilter:filterList">
                         <td>
                             <div *ngIf="showImage">
                                 <img
@@ -49,7 +50,10 @@
                         <td>{{ item.name }}</td>
                         <td>{{ item.age }}</td>
                         <td>{{ item.email }}</td>
-                        <td>{{ item.payment }}</td>
+                        <td>{{ item.payment|currency }}</td>
+                        <td>
+                            <app-notes (handleNote)="onNoteClick($event)" [note]="item.note ?? 0" />
+                        </td>
                     </tr>
                 </tbody>
             </table>

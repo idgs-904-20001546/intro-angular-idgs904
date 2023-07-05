@@ -6,6 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./operasbas.component.css'],
 })
 export class OperasbasComponent {
-	first = '';
-	second = '';
+  first: number = 0;
+  second: number = 0;
+  result: number = 0;
+  selected = 'plus';
+  typesOperations = {
+    plus: '+',
+    less: '-',
+    mulply: '*',
+    divide: '/'
+  } as { plus: string, less: string,  mulply: string,  divide: string, };
+
+  calculate() {
+    //let some = this.typesOperations[`${this.selected}`];
+    //return `${this.first} ${  } ${this.second}`;
+  }
 }
